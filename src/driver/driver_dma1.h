@@ -1,6 +1,7 @@
 #ifndef DRIVER_DMA1_H
 #define DRIVER_DMA1_H
 
+#include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/dma.h>
 #include <libopencm3/cm3/nvic.h>
 #include <libopencm3/stm32/spi.h>

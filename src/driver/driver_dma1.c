@@ -1,5 +1,8 @@
 #include "driver_dma1.h"
+
+#if (DEBUG_DMA == 1)
 #include "driver_usart1.h"
+#endif
 void driver_dma1_setup(){
     rcc_periph_clock_enable(RCC_DMA1);
 
@@ -35,11 +38,14 @@ void driver_dma_stop(){
 }
 
 void dma1_channel3_isr(){
+    #if (DEBUG_DMA == 1)
     printf("dma ch3 isr\n");
+    #endif
     if(dma_get_interrupt_flag(DMA1, DMA_CHANNEL3, DMA_TCIF)){
         dma_clear_interrupt_flags(DMA1, DMA_CHANNEL3, DMA_TCIF);
-        //dma_disable_transfer_complete_interrupt(DMA1, DMA_CHANNEL3);
         spi_disable_tx_dma(SPI1);
+        #if (DEBUG_DMA == 1)
         printf("DMA send complete\n");
+        #endif
     }
 }
