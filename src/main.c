@@ -50,18 +50,10 @@ int main(void) {
 	while(1){
 		spi_send(SPI1, 0x0);
 		spi_send(SPI1, 0x0);
-		// convert_to_rgb(255, 0, 0);  // LED 0 -- Red
-		// convert_to_rgb(0, 255, 0); // LED 1 -- Green
-		// convert_to_rgb(0, 0, 255); // LED 2 -- Blue
-		driver_ws2812_set_rgb(RGB_Yellow, buffer);
+		driver_ws2812_set_rgb(RGB_Blue, buffer);
 		for(uint8_t i=0; i<24; i++){
 			spi_send(SPI1, buffer[i]);
 		}
-
-		// driver_ws2812_to_rgb(0, 255, 0, buffer);
-		// for(uint8_t i=0; i<24; i++){
-		// 	spi_send(SPI1, buffer[i]);
-		// }
 	}
 	return 0;
 }
