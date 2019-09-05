@@ -76,7 +76,7 @@ typedef enum {
         RGB_Goldenrod=0xDAA520,
         RGB_Gray=0x808080,
         RGB_Grey=0x808080,
-        RGB_Green=0x008000,
+        RGB_Green=0x00FF00,
         RGB_GreenYellow=0xADFF2F,
         RGB_Honeydew=0xF0FFF0,
         RGB_HotPink=0xFF69B4,
