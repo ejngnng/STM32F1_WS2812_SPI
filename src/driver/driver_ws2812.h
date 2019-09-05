@@ -2,6 +2,7 @@
 #define DRIVER_WS2812_H
 
 #include <stdint.h>
+#include <string.h>
 #include "color/color.h"
 
 /*
@@ -13,8 +14,10 @@
 #define WS2812_BIT0    0xE0
 
 
-void driver_ws2812_setup();
+void driver_ws2812_setup(uint8_t nums);
 
-void driver_ws2812_set_rgb(rgb_t rgb, uint8_t *buffer);
+void driver_ws2812_set_pixel_rgb(rgb_t rgb, uint8_t nums);
+
+void driver_ws2812_show();
 
 #endif
