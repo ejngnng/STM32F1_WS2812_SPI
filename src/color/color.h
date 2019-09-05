@@ -17,7 +17,7 @@ typedef struct {
         uint8_t b;
         uint8_t blue;
     };
-}CRGB;
+}CRGB __attribute__((aligned(1)));
 
 typedef enum {
         RGB_AliceBlue=0xF0F8FF,
