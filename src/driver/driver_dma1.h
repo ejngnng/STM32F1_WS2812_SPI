@@ -7,7 +7,7 @@
 
 void driver_dma1_setup();
 
-void driver_spi_dma_transceive(uint8_t *tx_buf, int tx_len);
+void driver_spi_dma_transmit(uint8_t *tx_buf, int tx_len);
 
 void driver_dma_start();
 
